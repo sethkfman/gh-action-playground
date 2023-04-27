@@ -10,8 +10,10 @@ on:
 jobs:
   main:
     name: Validate PR title
+    permissions:
+      contents: read   
     runs-on: ubuntu-latest
     steps:
-      - uses: amannn/action-semantic-pull-request@v5
+      - uses: amannn/action-semantic-pull-request@ff373f4e8056b732dfd0eadd42ae54c004e5523b
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
